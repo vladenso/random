@@ -1,13 +1,15 @@
 import java.util.*;
 
 public class test {
-	
 	public static void main(String[] args) {
-		System.out.println(solution(1, 8, 3, 2, 6, 4));
+		System.out.println(time(1, 8, 3, 2, 6, 4));
 	}
-
-	public static String solution(int A, int B, int C, int D, int E, int F) {
+	
+	public static String time(int A, int B, int C, int D, int E, int F) {
     // write your code in Java SE 8
+	// Given 6 integers, find the largest legal time.
+	// return in format hh:mm:ss
+	// if not possible, return "NOT POSSIBLE"
         PriorityQueue<Integer> queue = new PriorityQueue<Integer>(6, Collections.reverseOrder());
         queue.add(A);
         queue.add(B);
@@ -15,7 +17,6 @@ public class test {
         queue.add(D);
         queue.add(E);
         queue.add(F);
-        
         
         F = queue.poll();
         if (F > 9) {
@@ -59,10 +60,7 @@ public class test {
         if (Integer.valueOf(h) > 24) {
             return "NOT POSSIBLE";
         }
-        
-        
         return h + ':' + m + ':' + s;
-    
 	}
 
 }
