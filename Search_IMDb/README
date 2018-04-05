@@ -1,0 +1,20 @@
+To run:
+
+python search_imdb.py
+
+
+
+Assumptions:
+I simply Crawl the IMBD pages, and if any ccs tag changes, the following approach wouldn't work
+
+
+Possible Improvements:
+Currently, I keep all keywords such as words from titles and director & actors names as keys to a dictionary, and values as pointers to movies. This allows search by given word or number of words and gives constant time lookup, but it doesn't account for incomplete or misspelled words. This also gives a case where 'car' and 'cars' considered unrelated keys.
+I think the best solution here would be to use Google's word2vec that would both relate similar words as well as solve an issue of incomplete/misspelled words. 
+
+Another improvement could be to filter out some keys that most likely are useless, like words 'a' or 'the'.
+
+Also, IMDb had really confusing, if not missing CSS tags, and there could be a better way of looking up fields such as director or title. 
+In addition right now page crawl takes quite a long time, and that place can be optimized.
+
+I currently consider only titles and director & actors names, but as an improvement other information about movies can be added.
