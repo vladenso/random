@@ -15,6 +15,6 @@ I think the best solution here would be to use Google's word2vec that would both
 Another improvement could be to filter out some keys that most likely are useless, like words 'a' or 'the'.
 
 Also, IMDb had really confusing, if not missing CSS tags, and there could be a better way of looking up fields such as director or title. 
-In addition right now page crawl takes quite a long time, and that place can be optimized.
+In addition, right now page crawl takes quite a long time, and that place can be optimized.
 
-I currently consider only titles and director & actors names, but as an improvement other information about movies can be added.
+Currently, I consider only titles and director & actors names, but as an improvement other information about movies can be added. Also, other information can be displayed along with titles. 
